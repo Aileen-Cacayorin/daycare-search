@@ -3,6 +3,11 @@ import config from '../config/environment';
 
 export default Ember.Route.extend({
   firebase: null,
+  
+  model() {
+    var sessionId = this.get("session").content.uid;
+    return this.store.findRecord('user', sessionId);
+  },
 
   beforeModel: function() {
     return this.get("session").fetch().catch(function() {});
@@ -53,6 +58,7 @@ export default Ember.Route.extend({
           console.log("Login Failed!", error);
         } else {
           console.log("Authenticated successfully with payload:", authData);
+          self.transitionTo('new-daycare');
           self.refresh();
         }
       });

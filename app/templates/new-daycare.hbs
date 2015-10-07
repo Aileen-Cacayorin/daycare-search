@@ -1,5 +1,18 @@
-
-  {{add-daycare user=model addDaycare="addDaycare" }}
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="">
+        <h3>Account Info</h3>
+      </div>
+      <div class="">
+        <h4>{{model.firstName}} {{model.lastName}}</h4> 
+        {{#link-to 'daycare' daycare.id}}<p>View Profile</p>{{/link-to}}
+        <!-- {{#link-to }}<p>Update</p>{{/link-to}} -->      
+      </div>      
+    </div>    
+  </div>  
+</div>
+{{add-daycare user=model addDaycare="addDaycare" }}
 
 
 
