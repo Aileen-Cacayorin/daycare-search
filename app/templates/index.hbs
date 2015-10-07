@@ -1,11 +1,17 @@
 
-{{session.uid}}
+<!-- {{session.uid}}
 <ul>
   {{#each model as |daycare|}}
     <li>{{#link-to 'daycare' daycare.id}}{{daycare.name}}{{/link-to}}</li>
   {{/each}}
-</ul>
+</ul> -->
 
-{{google-map daycare=model}}
+<div class="jumbotron" style="background-image: url(http://www.huffinsurance.com/portals/nicklow/images/Daycare%20Cartoon%2025%20pct.jpg)">  
+</div>
+<div class="container">
+  <h2>List & Find daycare will be as easy as breeze</h2>
+  {{google-map daycare=model}}  
+</div>
+
 
 {{outlet}}
