@@ -8,7 +8,7 @@
         <li class="navLinks">{{#link-to 'new-daycare'}}<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>Add Daycare{{/link-to}}</li>
       {{/if}}
 
-
+    </ul>
 
 
 
@@ -20,13 +20,14 @@
       {{#if session.isAuthenticated}}
       <!-- Logged in as {{session.currentUser.displayName}}
       {{#link-to 'user' session.content.uid}}<button>Your Profile</button>{{/link-to}} -->
-      <button {{action "signOut"}}>Sign out</button>
+        <div class="navLinks"><button type="button" class="btn btn-default" {{action "signOut"}}>Sign out</button></div>
+    
       {{else}}
-      <li class="navLinks">{{login-modal method="signUp" signUp="signUp" showExtras=true}}</li>
-      <li class="navLinks">{{login-modal method="signIn" signIn="signIn" showExtras=false}}</li>
+        <div class="navLinks">{{login-modal method="signUp" signUp="signUp" showExtras=true}}</div>
+        <div class="navLinks">{{login-modal method="signIn" signIn="signIn" showExtras=false}}</div>
       {{/if}}
 
-    </ul>
+    <!-- </ul> -->
   </div>
 </nav>
 
