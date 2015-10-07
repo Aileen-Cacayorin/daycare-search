@@ -6,12 +6,28 @@
   {{/each}}
 </ul> -->
 
-<div class="jumbotron" style="background-image: url(http://www.huffinsurance.com/portals/nicklow/images/Daycare%20Cartoon%2025%20pct.jpg)">  
+<div class="jumbotron">
 </div>
 <div class="container">
-  <h2>List & Find daycare will be as easy as breeze</h2>
-  {{google-map daycare=model}}  
+  <h2 id='mainHeader'>List & Find daycare will be as easy as breeze</h2>
+  <div class="row search-daycare">
+    <div class="col-xs-2 search-daycare">
+      <form class="form-inline">
+        <label for="distance">Distance</label>
+        {{view "select" content=radius value=selectedRadius}}
+      </form>
+    </div>
+    <div class="input-group col-md-6 col-md-offset-3">
+      {{input type="text" value=address id="address" class="form-control" placeholder="Enter Address"}}
+      <span class="input-group-btn">
+        <button {{action 'search' daycare}} class="btn btn-default" type="button" id='search'>
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>FIND A DAYCARE
+        </button>
+      </span>
+    </div><!-- /input-group -->
+  </div>
 </div>
+
 
 
 {{outlet}}

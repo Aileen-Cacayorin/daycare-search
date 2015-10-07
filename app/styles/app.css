@@ -104,25 +104,38 @@ img {
   margin:0;
   padding-top: 0.4em;
   padding-bottom: 0.4em;
-   
+
 }
 
 .navLinks button {
-  border: none;  
+  border: none;
 }
 
 .jumbotron {
-  height: 450px;
+  background-image: url(http://www.huffinsurance.com/portals/nicklow/images/Daycare%20Cartoon%2025%20pct.jpg);
+  height: 600px;
   margin-top: 0;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   opacity: 1;
   margin-bottom: 0;
+  background-color: #777;
+  background-color : transparent;
+
+
 }
 
- 
+.search-daycare {
+  text-align: center;
+}
 
-.transbox {
-  /*opacity: 1;*/
-  margin: 2em;
+#mainHeader{
+  color: #99D6FF;
+
+}
+
+#search {
+  background-color: #FF5050;
+  color: #fff;
+
 }
